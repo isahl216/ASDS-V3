@@ -1,17 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
     const teamForm = document.getElementById('teamForm');
-    if (teamForm) {
-        teamForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert("Team successfully signed up!");
-        });
-    }
+    const timeSection = document.getElementById('timeSection');
+    const finishButton = document.getElementById('finish');
 
-    const adminForm = document.getElementById('adminForm');
-    if (adminForm) {
-        adminForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert("Admin login successful!");
+    teamForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        timeSection.style.display = 'block';
+    });
+
+    document.querySelectorAll('.time-buttons button').forEach(button => {
+        button.addEventListener('click', function () {
+            const action = this.getAttribute('data-action');
+            document.getElementById(action).textContent = new Date().toLocaleTimeString();
+            this.disabled = true;
         });
-    }
+    });
+
+    finishButton.addEventListener('click', function () {
+        alert("Trip details submitted successfully!");
+    });
 });
