@@ -3,26 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambulance Dispatch - Team Sign-Up</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>KFSH&RC-M AMBULANCE SERVICES DISPATCH SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Ambulance Dispatch System</h1>
+        KFSH&RC-M AMBULANCE SERVICES DISPATCH SYSTEM
     </header>
-    <div class="container">
+    <div class="container" id="teamAccess">
         <h2>Team Sign Up</h2>
-        <p>Please enter the required details below to proceed.</p>
         <form id="teamForm">
             <input type="text" id="teamCode" placeholder="Enter Team Code" required>
             <input type="text" id="medicName" placeholder="Enter Medic Name" required>
             <input type="text" id="emtName" placeholder="Enter EMT Name" required>
-            <input type="text" id="driverName" placeholder="Enter Driver Name (Optional)">
-            <input type="text" id="ambulanceCode" placeholder="Enter Ambulance Code (Optional)">
             <button type="submit">Sign Up</button>
         </form>
-        <a href="admin.html">Admin Login</a> <!-- Link to Admin Page -->
     </div>
+    <div class="container" id="timeSection" style="display: none;">
+        <h2>Dispatch Timeline</h2>
+        <div class="time-buttons">
+            <button data-action="timeOfCall">Time of Call</button>
+            <div id="timeOfCall"></div>
+
+            <button data-action="dispatchTime">Dispatch Time</button>
+            <div id="dispatchTime"></div>
+
+            <button data-action="enRoute">En-Route</button>
+            <div id="enRoute"></div>
+
+            <button data-action="arrival">Arrival</button>
+            <div id="arrival"></div>
+        </div>
+        <h3>Trip Details</h3>
+        <select id="tripType">
+            <option value="emergency">Emergency</option>
+            <option value="non-emergency">Non-Emergency</option>
+        </select>
+        <input type="text" id="ambulanceCode" placeholder="Enter Ambulance Code" required>
+        <input type="text" id="narcoticPouch" placeholder="Enter Narcotic Pouch Number" required>
+        <button id="finish">Finish</button>
+    </div>
+    
+    <div class="container" id="adminAccess">
+        <h2>Admin Login</h2>
+        <form id="adminForm">
+            <input type="password" id="adminCode" placeholder="Enter Admin Access Code" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
