@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambulance Team Times</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ambulance Team Times</h1>
+    <div id="realTimeClock"></div>
+
+    <div class="buttons">
+      <button onclick="logTime('timeOfCall')">Time of Call</button>
+      <span id="timeOfCall"></span>
+
+      <button onclick="logTime('dispatchTime')">Dispatch Time</button>
+      <span id="dispatchTime"></span>
+
+      <button onclick="logTime('enRoute')">En-Route</button>
+      <span id="enRoute"></span>
+
+      <button onclick="logTime('arrival')">Arrival</button>
+      <span id="arrival"></span>
+
+      <button onclick="logTime('departure')">Departure</button>
+      <span id="departure"></span>
+
+      <button onclick="logTime('destination')">Destination</button>
+      <span id="destination"></span>
+
+      <button onclick="logTime('inService')">In-Service</button>
+      <span id="inService"></span>
+    </div>
+
+    <label for="tripType">Trip Type:</label>
+    <input type="text" id="tripType">
+
+    <label for="narcoticPouch">Narcotic Pouch Number:</label>
+    <input type="text" id="narcoticPouch">
+
+    <button onclick="submitData()">Submit</button>
+  </div>
+  <script src="times.js"></script>
+</body>
+</html>

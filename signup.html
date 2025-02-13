@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambulance Team Sign-Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ambulance Team Sign-Up</h1>
+    <form id="signupForm">
+      <label for="teamCode">Team Code:</label>
+      <input type="text" id="teamCode" name="teamCode" required>
+
+      <label for="medicName">Medic Name:</label>
+      <input type="text" id="medicName" name="medicName" required>
+
+      <label for="emtName">EMT Name:</label>
+      <input type="text" id="emtName" name="emtName" required>
+
+      <label for="driverName">Driver Name (Optional):</label>
+      <input type="text" id="driverName" name="driverName">
+
+      <label for="ambulanceCode">Ambulance Code (Optional):</label>
+      <input type="text" id="ambulanceCode" name="ambulanceCode">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>
